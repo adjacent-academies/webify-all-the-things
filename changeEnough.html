@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>edabit :: changeEnough</title>
+    <style>
+      .redd {
+        border: 1px solid red;
+      }
+      div {
+        /* border: 1px solid red; */
+      }
+
+      .tiny.horizontal.statistic {
+        padding-right: 15px;
+      }
+
+      #yes,
+      #no {
+        display: none;
+      }
+
+      #output {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #movie {
+        max-height: 350px;
+      }
+    </style>
+    <!-- prettier-ignore -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css" />
+  </head>
+  <body>
+    <div class="ui container">
+      <div class="ui hidden divider"></div>
+      <div class="ui centered grid">
+        <div class="row">
+          <div class="six wide column">
+            <form class="ui form">
+              <h3 class="ui dividing header">Change In Your Pocket</h3>
+              <div class="inline fields">
+                <div class="ten wide field">
+                  <label>Quarters</label>
+                </div>
+                <div class="six wide field">
+                  <input type="number" name="quarters" />
+                </div>
+              </div>
+
+              <div class="inline fields">
+                <div class="ten wide field">
+                  <label>Dimes</label>
+                </div>
+                <div class="six wide field">
+                  <input type="number" name="dimes" />
+                </div>
+              </div>
+
+              <div class="inline fields">
+                <div class="ten wide field">
+                  <label>Nickels</label>
+                </div>
+                <div class="six wide field">
+                  <input type="number" name="nickels" />
+                </div>
+              </div>
+
+              <div class="inline fields">
+                <div class="ten wide field">
+                  <label>Pennies</label>
+                </div>
+                <div class="six wide field">
+                  <input type="number" name="pennies" />
+                </div>
+              </div>
+            </form>
+            <div class="ui tiny horizontal statistic right floated">
+              <div class="value">$ <span id="pocket">0</span></div>
+              <div class="label">total</div>
+            </div>
+          </div>
+          <div class="six wide column stretched">
+            <div class="ui grid">
+              <div class="row">
+                <div class="column">
+                  <h3 class="ui dividing header">Do you have enough?</h3>
+                  <div id="progress" class="ui tiny orange progress" data-value="1" data-total="10">
+                    <div class="bar"></div>
+                  </div>
+                  <div id="check" class="ui primary button">check</div>
+                </div>
+              </div>
+              <div class="stretched row">
+                <div id="output" class="sixteen wide column">
+                  <!-- prettier-ignore -->
+                  <i id="yes" class="massive green check circle outline icon"></i>
+                  <i id="no" class="massive big red dont icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="eight wide right aligned column">
+            <!-- prettier-ignore -->
+            <img id="movie" src="https://via.placeholder.com/300x450.png?text=movie%20placeholder"/>
+          </div>
+          <div class="eight wide left aligned middle aligned column">
+            <div class="ui huge statistic">
+              <div class="value">$ <span id="cost">0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
+    <script src="js/changeEnough.js"></script>
+  </body>
+</html>
